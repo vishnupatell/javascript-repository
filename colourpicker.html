@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display:block;
+        }
+        .button{
+        width:100px;
+        height: 100px;
+        
+        border: 2px solid black;
+        margin-top: 3px;
+        }
+
+        #grey{
+            background-color: grey;
+        }
+        #black{
+            background-color: black;
+        }
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        #orange{
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <span class="button" id="grey"></span>
+    <span class="button" id="black"></span>
+    <span class="button" id="red"></span>
+    <span class="button" id="green"></span>
+    <div class="button" id="orange"></div>
+</body>
+<script>
+    const button=document.querySelectorAll(".button");
+    console.log(button)
+    
+    const body=document.querySelector("body");
+    button.forEach(function(buttons){
+        console.log(buttons);
+        buttons.addEventListener('click',function(e){
+            console.log(e.target);
+            if(e.target.id==="grey"){
+                body.style.backgroundColor=e.target.id;
+            }
+           else if(e.target.id==="black"){
+                body.style.backgroundColor=e.target.id;
+            }
+          else  if(e.target.id==="red"){
+                body.style.backgroundColor=e.target.id;
+            }
+           else if(e.target.id==="green"){
+                body.style.backgroundColor=e.target.id;
+            }
+           else if(e.target.id==="orange"){
+                body.style.backgroundColor=e.target.id;
+            }
+        })
+    })
+    
+
+</script>
+</html>
